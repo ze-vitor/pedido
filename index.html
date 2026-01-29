@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitória, atenção 🚨</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 330px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    h1 {
+      font-size: 22px;
+      color: #e91e63;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 12px 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px;
+      width: 45%;
+      font-size: 15px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background: #e91e63;
+      color: white;
+    }
+
+    .yes:hover {
+      transform: scale(1.05);
+    }
+
+    .no {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="card">
+    <h1>🚨 Vitória, aviso importante 🚨</h1>
+    <p>
+      Este site detectou:<br>
+      ✔ sorriso bonito<br>
+      ✔ pessoa incrível<br>
+      ✔ risco alto de eu me apaixonar 😳
+    </p>
+
+    <p>
+      Diante disso, o sistema exige uma resposta obrigatória:
+    </p>
+
+    <p><strong>Você aceita namorar comigo? 💖</strong></p>
+
+    <div class="buttons">
+      <button class="yes" onclick="aceitou()">Sim, óbvio 😍</button>
+      <button class="no" onclick="negou()">Não (mentira) 🙄</button>
+    </div>
+  </div>
+
+  <script>
+    function aceitou() {
+      document.getElementById("card").innerHTML = `
+        <h1>🎉 PARABÉNS, VITÓRIA 🎉</h1>
+        <p>Você desbloqueou:</p>
+        <p>💖 um namorado incrível<br>
+           🍟 companhia pra comer besteira<br>
+           😂 risadas sem limite</p>
+        <p><strong>Status atualizado: NAMORANDO 💑</strong></p>
+      `;
+    }
+
+    function negou() {
+      alert("Opção inválida 😂 Tente novamente!");
+    }
+  </script>
+
+</body>
+</html>
